@@ -1,18 +1,20 @@
 # Toegankelijkheid testen
 
-Disclaimer: De handvatten die in dit document geboden worden zijn **géén** vervanging van een toegankelijkheidsaudit en biedt slechts een manier om snel voor de hand liggende  toegankelijk- en gebruiksvriendelijkheid-problemen op te sporen!
+## Disclaimer
+
+De tips in dit document vervangen geen officiële toegankelijkheidsaudit. Ze helpen alleen om snel opvallende problemen met toegankelijkheid en gebruiksvriendelijkheid te herkennen.
 
 ## Waarom toegankelijk?
 
-Toegankelijke websites zorgen iedereen, inclusief mensen met een beperking (visueel, motorisch, auditief of cognitief) de inhoud  kunnen gebruiken.
+Toegankelijke websites zijn voor iedereen bruikbaar, ook voor mensen met een beperking – of die nu visueel, motorisch, auditief of cognitief is.
 
-Als overheid dienen we producten en diensten te leveren die voor iedereen welkom, te bedienen en begrijpen zijn. Niet alleen vanuit ethische overwegingen (iedereen heeft het recht om digitaal mee te kunnen doen en zaken met de overheid te regelen) maar ook vanuit [juridisch oogpunt](#wetgeving).
+Als overheid hebben we de verantwoordelijkheid om producten en diensten te bieden die voor iedereen toegankelijk, begrijpelijk en bruikbaar zijn. Niet alleen omdat iedereen het recht heeft om digitaal mee te doen en zaken met de overheid te regelen, maar ook [vanwege wettelijke verplichtingen](#wetgeving).
 
-Een toegankelijke website is voor iedereen bruikbaard. Een ander bijkomend voordeel is dat een zoekmachine (een *‘blinde’* gebruiker) tevens de inhoud van een pagina correct kan indexeren.
+Een toegankelijke website is dus niet alleen inclusief, maar ook praktisch. Zo kunnen zoekmachines – net als blinde gebruikers – de inhoud beter lezen en indexeren.
 
 ### WCAG
 
-De *Web Content Accessibility Guidelines* (WCAG) zijn internationale richtlijnen en aanbevelingen om webinhoud toegankelijk te maken De richtlijnen zijn opgesteld door het [World Wide Web Consortium (W3C)](https://www.w3.org/) en richten zich op vier basisprincipes:
+De *Web Content Accessibility Guidelines* (WCAG) zijn internationale richtlijnen en aanbevelingen om web-inhoud toegankelijk te maken De richtlijnen zijn opgesteld door het [World Wide Web Consortium (W3C)](https://www.w3.org/) en richten zich op vier basisprincipes:
 
 * waarneembaar,
 * bedienbaar,
@@ -21,11 +23,11 @@ De *Web Content Accessibility Guidelines* (WCAG) zijn internationale richtlijnen
 
 > In het Engels POUR: **P**erceivable, **O**perable, **U**nderstandable, **R**obust.
 
-[De European Accessibility Act](https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl) refereert specifiek naar [WCAG versie 2.1 niveau AA](), alhoewel versie 2.2 momenteel (ook) nog in *Recommendation* fase is, is het verstandig om te zorgen dat aan [versie 2.2 niveau AA](https://www.w3.org/Translations/WCAG22-nl/) voldaan wordt.
+[De European Accessibility Act](https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl) refereert specifiek naar [WCAG versie 2.1 niveau AA](), alhoewel versie 2.2 momenteel (ook) nog in *Recommendation* fase is, is het verstandig om te zorgen ook aan [versie 2.2 niveau AA](https://www.w3.org/Translations/WCAG22-nl/) te voldoen.
 
 ### ARIA
 
-[Accessible Rich Internet Applications (ARIA)](https://www.w3.org/WAI/standards-guidelines/aria/) is een specificatie van het [W3C](https://www.w3.org/) die helpt om interactieve webinhoud toegankelijk te maken voor mensen met een beperking. Met ARIA-attributen kunnen extra toegankelijkheidsinformatie en rolbeschrijvingen aan HTML-elementen worden gegeven, zodat bijvoorbeeld screenreaders complexe interfaces beter kunnen interpreteren.
+[Accessible Rich Internet Applications (ARIA)](https://www.w3.org/WAI/standards-guidelines/aria/) is een specificatie van het [W3C](https://www.w3.org/) die helpt om interactieve web-inhoud toegankelijk te maken voor mensen met een beperking. Met ARIA-attributen kunnen extra toegankelijkheidsinformatie en rolbeschrijvingen aan HTML-elementen worden gegeven, zodat bijvoorbeeld screenreaders complexe interfaces beter kunnen interpreteren.
 
 Veel toegankelijkheidsinformatie en rolbeschrijvingen worden standaard al meegeleverd met de juiste semantische HTML elementen. Het (verkeerde) gebruik van ARIA heeft vaak averechtse gevolgen en kan resulteren in een nog ontoegankelijker product. Vaak wordt verwezen naar de ongeschreven regel “*[The first rule of ARIA: Don’t use ARIA](https://www.a11y-collective.com/blog/the-first-rule-for-using-aria/)*”, of genuanceerder: “*[If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, then do so.](https://www.w3.org/TR/using-aria/#rule1)*”
 
@@ -35,17 +37,17 @@ Veel toegankelijkheidsinformatie en rolbeschrijvingen worden standaard al meegel
 
 #### Implementatiewet toegankelijkheidsvoorschriften producten en diensten
 
-> “Met deze implementatiewet wordt de Europese Richtlijn met betrekking tot de toegankelijkheidsvoorschriften voor producten en diensten verankerd in de Nederlandse wetgeving.”
+> “*Met deze implementatiewet wordt de Europese Richtlijn met betrekking tot de toegankelijkheidsvoorschriften voor producten en diensten verankerd in de Nederlandse wetgeving.*”
 
 [Implementatiewet toegankelijkheidsvoorschriften producten en diensten](https://www.eerstekamer.nl/wetsvoorstel/36380_implementatiewet)
 
 #### European Accessibility Act
 
-[De European Accessibility Act]((https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl)), die in 2019 is goedgekeurd, is een Europese richtlijn voor nationale wetgeving binnen de EU-lidstaten  om digitale en fysieke producten en diensten toegankelijk te maken voor mensen met een beperking. De wet stelt toegankelijkheidseisen aan onder andere websites en mobiele apps en treedt op 28 juni 2025 in werking.
+[De European Accessibility Act]((https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl)), in 2019 goedgekeurd, is een EU richtlijn voor nationale wetgeving binnen lidstaten om digitale en fysieke producten en diensten toegankelijk te maken voor mensen met een beperking. De wet stelt toegankelijkheidseisen aan onder meer websites en mobiele apps en treedt op 28 juni 2025 in werking.
 
 ## (Automatisch) testen in de browser
 
-Er zijn meerdere extensies beschikbaar om direct in een browser te testen. De ondergenoemde extensies zijn beschikbaar voor Chromium-gebaseerde browsers en werken o.a. in de volgende browsers:
+Er zijn verschillende extensies beschikbaar om direct in de browser te testen. De onderstaande extensies zijn geschikt voor Chromium-gebaseerde browsers, zoals:
 
 * Google Chrome
 * Microsoft Edge
@@ -53,9 +55,9 @@ Er zijn meerdere extensies beschikbaar om direct in een browser te testen. De on
 * Chromium
 * Opera
 
-Er zijn meerdere browser extensies die (automatisch) testen op verschillende toegankelijkheidaspecten. Deze geven vaak verschillende resulaten waardoor het raadzaam is meerdere extensies te gebruiken en resultaten kritisch te bekijken.
+Er zijn meerdere browser extensies die (al dan niet automatisch) testen op verschillende toegankelijkheid aspecten. Deze geven vaak verschillende resultaten waardoor het raadzaam is meerdere extensies te gebruiken en resultaten kritisch te bekijken.
 
-Enkele aspecten zijn makkelijk om automatisch te testen, zoals het ontbreken van tekst alternatieven voor afbeelingen, contrast tussen voor- en achtergronden,  en een correcte documentstructuur. Andere aspecten, zoals het juiste gebruik van HTML elementen ([HTML semantiek](https://html.spec.whatwg.org/multipage/dom.html#semantics-2)) en taalgebruik zijn niet te testen.
+Enkele aspecten zijn makkelijk automatisch te testen, zoals het ontbreken van tekst alternatieven voor afbeeldingen, contrast tussen voor- en achtergrondkleur,  en een correcte documentstructuur. Andere aspecten, zoals het juiste gebruik van HTML elementen ([HTML semantiek](https://html.spec.whatwg.org/multipage/dom.html#semantics-2)) en begrijpelijk taalgebruik zijn niet (goed) automatisch te testen.
 
 ### WAVE
 
@@ -81,6 +83,12 @@ Deze extensie stuurt geen data naar derde partijen en kan hierdoor gebruikt word
 [WAVE Browser Extensions](https://wave.webaim.org/extension/)
 
 ### BrowserStack Accessibility Toolkit
+
+ℹ️ BrowserStack account nodig. De gratis versie maakt het mogelijk om vijf pagina’s per kalendermaand te scannen.
+
+Accessibility Toolkit voegt functionaliteit aan DevTools toe. Het is dus nodig om DevTools te openen voordat deze extensie geactiveerd kan worden.
+
+Deze extensie maakt het mogelijk om tevens op basis van pagina-interactie (door het navigeren op de pagina, acties activeren, etc.) een inventarisatie te maken.
 
 [BrowserStack Accessibility Toolkit](https://www.browserstack.com/docs/accessibility/overview/install-browser-extension)
 
