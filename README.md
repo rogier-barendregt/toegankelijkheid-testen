@@ -1,3 +1,10 @@
+---
+title: "Toegankelijkheid testen"
+author: Rogier Barendregt
+date: 13 mei 2025
+output: pdf_document
+---
+
 # Toegankelijkheid testen
 
 ## Disclaimer
@@ -14,7 +21,7 @@ Een toegankelijke website is dus niet alleen inclusief, maar ook praktisch. Zo k
 
 ### WCAG
 
-De *Web Content Accessibility Guidelines* (WCAG) zijn internationale richtlijnen en aanbevelingen om web-inhoud toegankelijk te maken De richtlijnen zijn opgesteld door het [World Wide Web Consortium (W3C)](https://www.w3.org/) en richten zich op vier basisprincipes:
+De *Web Content Accessibility Guidelines* (WCAG) zijn internationale richtlijnen om webinhoud toegankelijk te maken.  Ze zijn opgesteld door het [World Wide Web Consortium (W3C)](https://www.w3.org/) en zijn gebaseerd op vier principes:
 
 * waarneembaar,
 * bedienbaar,
@@ -25,11 +32,15 @@ De *Web Content Accessibility Guidelines* (WCAG) zijn internationale richtlijnen
 
 [De European Accessibility Act](https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl) refereert specifiek naar [WCAG versie 2.1 niveau AA](), alhoewel versie 2.2 momenteel (ook) nog in *Recommendation* fase is, is het verstandig om te zorgen ook aan [versie 2.2 niveau AA](https://www.w3.org/Translations/WCAG22-nl/) te voldoen.
 
+[De European Accessibility Act]((https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl)) verwijst specifiek naar WCAG 2.1, niveau AA. Hoewel versie 2.2 op dit moment nog in de aanbevelingsfase zit, is het verstandig om aan [WCAG 2.2 niveau AA](https://www.w3.org/Translations/WCAG22-nl/) te voldoen.
+
 ### ARIA
 
-[Accessible Rich Internet Applications (ARIA)](https://www.w3.org/WAI/standards-guidelines/aria/) is een specificatie van het [W3C](https://www.w3.org/) die helpt om interactieve web-inhoud toegankelijk te maken voor mensen met een beperking. Met ARIA-attributen kunnen extra toegankelijkheidsinformatie en rolbeschrijvingen aan HTML-elementen worden gegeven, zodat bijvoorbeeld screenreaders complexe interfaces beter kunnen interpreteren.
+[Accessible Rich Internet Applications (ARIA)](https://www.w3.org/WAI/standards-guidelines/aria/) is een specificatie van het W3C die helpt om interactieve webinhoud toegankelijk te maken voor mensen met een beperking. Met ARIA-attributen kun je extra informatie en rolbeschrijvingen toevoegen aan HTML-elementen, zodat screenreaders complexe interfaces beter begrijpen.
 
-Veel toegankelijkheidsinformatie en rolbeschrijvingen worden standaard al meegeleverd met de juiste semantische HTML elementen. Het (verkeerde) gebruik van ARIA heeft vaak averechtse gevolgen en kan resulteren in een nog ontoegankelijker product. Vaak wordt verwezen naar de ongeschreven regel “*[The first rule of ARIA: Don’t use ARIA](https://www.a11y-collective.com/blog/the-first-rule-for-using-aria/)*”, of genuanceerder: “*[If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, then do so.](https://www.w3.org/TR/using-aria/#rule1)*”
+Let op: veel van deze toegankelijkheidsinformatie is al standaard aanwezig in correct toegepaste, semantische HTML-elementen. Verkeerd gebruik van ARIA kan juist voor méér problemen zorgen en de toegankelijkheid verslechteren.
+
+Daarom geldt vaak de ongeschreven regel: “*The first rule of ARIA is: Don’t use ARIA.*”, Of iets genuanceerder: *[If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, then do so.](https://www.w3.org/TR/using-aria/#rule1)*”
 
 <a name="wetgeving"></a>
 
@@ -43,7 +54,7 @@ Veel toegankelijkheidsinformatie en rolbeschrijvingen worden standaard al meegel
 
 #### European Accessibility Act
 
-[De European Accessibility Act]((https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl)), in 2019 goedgekeurd, is een EU richtlijn voor nationale wetgeving binnen lidstaten om digitale en fysieke producten en diensten toegankelijk te maken voor mensen met een beperking. De wet stelt toegankelijkheidseisen aan onder meer websites en mobiele apps en treedt op 28 juni 2025 in werking.
+[De European Accessibility Act](https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl), goedgekeurd in 2019, is een EU-richtlijn die lidstaten verplicht om digitale en fysieke producten en diensten toegankelijk te maken voor mensen met een beperking. De wet stelt onder andere eisen aan de toegankelijkheid van websites en mobiele apps, en treedt op 28 juni 2025 in werking.
 
 ## (Automatisch) testen in de browser
 
@@ -55,9 +66,11 @@ Er zijn verschillende extensies beschikbaar om direct in de browser te testen. D
 * Chromium
 * Opera
 
-Er zijn meerdere browser extensies die (al dan niet automatisch) testen op verschillende toegankelijkheid aspecten. Deze geven vaak verschillende resultaten waardoor het raadzaam is meerdere extensies te gebruiken en resultaten kritisch te bekijken.
+Er zijn verschillende browserextensies beschikbaar die (gedeeltelijk automatisch) toegankelijkheidsaspecten testen. Omdat ze vaak verschillende resultaten geven, is het verstandig om meerdere extensies te gebruiken en de uitkomsten kritisch te beoordelen.
 
-Enkele aspecten zijn makkelijk automatisch te testen, zoals het ontbreken van tekst alternatieven voor afbeeldingen, contrast tussen voor- en achtergrondkleur,  en een correcte documentstructuur. Andere aspecten, zoals het juiste gebruik van HTML elementen ([HTML semantiek](https://html.spec.whatwg.org/multipage/dom.html#semantics-2)) en begrijpelijk taalgebruik zijn niet (goed) automatisch te testen.
+Sommige aspecten zijn goed automatisch te testen, zoals het ontbreken van alternatieve tekst bij afbeeldingen, kleurcontrast en een juiste documentstructuur. Andere onderdelen – zoals het correct gebruik van [HTML-semantiek](https://html.spec.whatwg.org/multipage/dom.html#semantics-2) of begrijpelijk (B1) taalgebruik – zijn moeilijk automatisch te controleren en vragen om handmatige beoordeling.
+
+Test worden vrijwel altijd uitgevoerd op individuele pagina’s, niet een gehele site.
 
 ### WAVE
 
@@ -84,17 +97,25 @@ Deze extensie stuurt geen data naar derde partijen en kan hierdoor gebruikt word
 
 ### BrowserStack Accessibility Toolkit
 
-ℹ️ BrowserStack account nodig. De gratis versie maakt het mogelijk om vijf pagina’s per kalendermaand te scannen.
+ℹ️ Om deze extensie te gebruiken is een account nodig. De gratis versie maakt het mogelijk vijf pagina’s per kalendermaand te scannen.
 
-Accessibility Toolkit voegt functionaliteit aan DevTools toe. Het is dus nodig om DevTools te openen voordat deze extensie geactiveerd kan worden.
+Accessibility Toolkit voegt functionaliteit toe aan DevTools. Het is dus nodig om DevTools te openen om met deze extensie te werken.
 
 Deze extensie maakt het mogelijk om tevens op basis van pagina-interactie (door het navigeren op de pagina, acties activeren, etc.) een inventarisatie te maken.
+
+![image](images/browserstack-accessibility-toolkit.png)
+
+Selecteer in DevTools het tabblad *Accessibility Toolkit* en klik op *Full page scan*.
+
+Door na de resultaten te ‘interacteren’ op de pagina kunnen ook dingen als menu’s, knoppen-staten, uitklapmechanismes, etc. gevalideerd worden.
+
+![image](images/browserstack-accessibility-toolkit-results.png)
 
 [BrowserStack Accessibility Toolkit](https://www.browserstack.com/docs/accessibility/overview/install-browser-extension)
 
 ### Accessible Web Helper
 
-[Accessible Web Helper](https://accessibleweb.com/web-accessibility-checker-browser-extension/) is een andere extensie die een automatisch rapport genereert met een opsomming van toegankelijheidproblemen.
+[Accessible Web Helper](https://accessibleweb.com/web-accessibility-checker-browser-extension/) is een andere extensie die een automatisch rapport genereert met een overzicht van toegankelijkheidsproblemen.
 
 Klik onder *Page Scanner* de optie *Scan Page* en zorg dat *Ruleset* WCAG 2.2 AA geselecteerd is. Klik vervolgens op *Scan Page* om een rapport te genereren.
 
@@ -116,39 +137,40 @@ Deze extensie is voornamelijk handig om de *Target size* van interactieve elemen
 
 Een interactief element (link of uitvoeren van een actie) dient [minimaal 24 × 24 pixels te zijn](#targetsize).
 
-Auto Scan biedt daarnaast nog de functie om een automatische test uit te voeren (*Auto Scan* → *Automated Issues*). Hiermee wordt gelijk duidelijk dat geen enkele automatische test alle toegankelijkheid problemen op kan sporen, de resultaten wijken sterk af van andere automatische test tools.
+*Auto Scan* biedt ook de mogelijkheid om een automatische test uit te voeren via *Auto Scan* → *Automated Issues*. Deze functie laat goed zien dat geen enkele tool alle toegankelijkheidsproblemen automatisch kan opsporen. De resultaten kunnen sterk afwijken van die van andere testtools.
 
 [HalfAccessible - Accessibility Toolkit in de Chrome Web Store](https://chromewebstore.google.com/detail/halfaccessible-accessibil/kofnlhenkilpdacklecdifdfigomanje)
 
 ### DigitalA11Y Tublets
 
-Met deze extensie kan je direct op een pagina verschillende HTML elementen en attributen, ARIA gebruik en tab-volgorde (de volgorde die een toetsenbord-gebruiker waarneemt) tonen.
+Met deze extensie kun je direct op een webpagina verschillende HTML-elementen en attributen bekijken, inclusief ARIA-gebruik en de tabvolgorde (de volgorde die een toetsenbordgebruiker ervaart).
 
 ![image](images/digitala11y-tublets-headings.png)
 
-<small>Bijschrift: Hier toont Tublets dat er slecht headings van niveau 6 gebruikt zijn, [zonder correcte heading-structuur en volgorde](https://www.a11yproject.com/posts/how-to-accessible-heading-structure/).</small>
+<small>Bijschrift: Tublets laat hier zien dat alleen koppen van niveau 6 worden gebruikt, [zonder een correcte structuur of logische volgorde](https://www.a11yproject.com/posts/how-to-accessible-heading-structure/).</small>
 
 ![image](images/digitala11y-tublets-taborder.png)
 
-<small>Bijschrift: Tab volgorde; 1 toont het element waar het eerst focus op wordt gelegd met de `tab` toets, 2 het volgende gefocuste element, etc.</small>
+<small>Bijschrift: Tabvolgorde: 1 geeft aan welk element als eerste focus krijgt met de `Tab`-toets, 2 het volgende, enzovoort.</small>
 
 ![image](images/digitala11y-tublets-overlapping-interactive-elements.png)
 
-<small>Bijschrift: Tublets geeft met de optie Touch Target Size tevens aan of interactieve elementen elkaar overlappen.</small>
+<small>Bijschrift: Met de optie *Touch Target Size* laat Tublets zien of interactieve elementen elkaar overlappen.</small>
 
 [DigitalA11Y Tublets in de Chrome Web Store](https://chromewebstore.google.com/detail/digitala11y-tublets/ccjeccodophadokglbdcinabgkiiakjh)
 
 ### BarrierBreak A11yInspect
 
-A11yInspect bundelt meerdere opties (*bookmarklets*) om diverse aspecten te testen zoals *Landmarks* en *Tab Order*.
+A11yInspect bundelt meerdere hulpmiddelen (*bookmarklets*) om verschillende toegankelijkheidsaspecten te testen, zoals *landmarks* en *tabvolgorde*.
 
 ![image](images/a11yinspect-landmarks.png)
 
-<small>Bijschrift: De Landmarks optie laat zien dat de volledige inhoud van de pagina in een `<form>` element staat, omdat de pagina geen formulier is kan dit tot diverse problemen leiden.</small>
+<small>Bijschrift: De optie *Landmarks* toont dat de volledige paginainhoud binnen een `<form>`-element staat. Omdat de pagina geen formulier is, kan dit tot verschillende toegankelijkheidsproblemen leiden.
+</small>
 
 ![image](images/a11yinspect-taborder.png)
 
-<small>Bijschrift: Tab Order toont de `tab`-toets volgorde en het pad dat een toetsenbord-gebruiker afloopt.</small>
+<small>Bijschrift: *Tab Order* laat de volgorde zien waarin een toetsenbordgebruiker met de `Tab`-toets door de pagina navigeert.</small>
 
 [BarrierBreak A11yInspect in de Chrome Web Store](https://chromewebstore.google.com/detail/barrierbreak-a11yinspect/giaolcgipopikbjonacmaokkeiaolmfp)
 
@@ -185,9 +207,9 @@ Enkele belangrijke HTML elementen met een geimpliceerde ‘role’:
 
 ### Skip-links
 
-*Skip links* zijn verborgen, links bovenaan een pagina die gebruikers in staat stellen om direct naar de hoofdinhoud van de pagina te springen en repeterende inhoud zoals de paginakop met hoofdnavigatie over te slaan.
+*Skip links* zijn verborgen links bovenaan een pagina waarmee gebruikers direct naar de hoofdinhoud kunnen springen. Zo kunnen ze repeterende onderdelen, zoals de paginakop en navigatie, overslaan.
 
-De meeste screenreaders bieden ingebouwde ondersteuning om direct naar de hoofdinhoud te navigeren. Toetsenbordgebruikers die geen screenreader gebruiken gebruiken echter wel Skip links.
+De meeste screenreaders bieden standaard een manier om snel naar de hoofdinhoud te springen. Voor toetsenbordgebruikers zonder screenreader zijn skip links echter essentieel voor efficiënte navigatie. Deze link moet zichtbaar worden zodra hij focus krijgt, en als eerste in de tabvolgorde staan.
 
 ### Toetsenbordnavigatie controleren
 
@@ -195,9 +217,9 @@ De extensie BarrierBreak A11yInspect kan de tab volgorde visualiseren.
 
 ### Gebruik screenreader-software
 
-Screenreading software maakt het mogelijk de inhoud van een pagina voor te lezen. Daarnaast bevat het vaak functies om bijvoorbeeld vaak repeterende delen van een pagina, zoals hoofdnavigatie, ove te slaan.
+Screenreading-software maakt het mogelijk om de inhoud van een webpagina voor te laten lezen. Daarnaast biedt het vaak functies om herhalende onderdelen, zoals de hoofdnavigatie, over te slaan.
 
-Gebruikers hebben vaak eigen voorkeuren, waaronder bijvoorbeeld de voorleessnelheid.
+Gebruikers hebben meestal hun eigen voorkeuren, zoals de snelheid waarmee de tekst wordt voorgelezen.
 
 ### In- en uitzoomen
 

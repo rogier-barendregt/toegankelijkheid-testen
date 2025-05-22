@@ -1,0 +1,285 @@
+<!DOCTYPE html><html><head>
+      <title>Toegankelijkheid testen</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/rogierbarendregt/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.18/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  color: #3b3b3b;
+  font-family: RijksSansVF;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.markdown-preview.markdown-preview a {
+  color: #01689b;
+  text-decoration: underline;
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: 0.0125em;
+  text-underline-offset: 0.15em;
+}
+.markdown-preview.markdown-preview a:hover {
+  color: #01496d;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="toegankelijkheid-testen">Toegankelijkheid testen </h1>
+<h2 id="disclaimer">Disclaimer </h2>
+<p>De tips in dit document vervangen geen officiële toegankelijkheidsaudit. Ze helpen alleen om snel opvallende problemen met toegankelijkheid en gebruiksvriendelijkheid te herkennen.</p>
+<h2 id="waarom-toegankelijk">Waarom toegankelijk? </h2>
+<p>Toegankelijke websites zijn voor iedereen bruikbaar, ook voor mensen met een beperking – of die nu visueel, motorisch, auditief of cognitief is.</p>
+<p>Als overheid hebben we de verantwoordelijkheid om producten en diensten te bieden die voor iedereen toegankelijk, begrijpelijk en bruikbaar zijn. Niet alleen omdat iedereen het recht heeft om digitaal mee te doen en zaken met de overheid te regelen, maar ook <a href="#wetgeving">vanwege wettelijke verplichtingen</a>.</p>
+<p>Een toegankelijke website is dus niet alleen inclusief, maar ook praktisch. Zo kunnen zoekmachines – net als blinde gebruikers – de inhoud beter lezen en indexeren.</p>
+<h3 id="wcag">WCAG </h3>
+<p>De <em>Web Content Accessibility Guidelines</em> (WCAG) zijn internationale richtlijnen om webinhoud toegankelijk te maken.  Ze zijn opgesteld door het <a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a> en zijn gebaseerd op vier principes:</p>
+<ul>
+<li>waarneembaar,</li>
+<li>bedienbaar,</li>
+<li>begrijpelijk en</li>
+<li>robuust</li>
+</ul>
+<blockquote>
+<p>In het Engels POUR: <strong>P</strong>erceivable, <strong>O</strong>perable, <strong>U</strong>nderstandable, <strong>R</strong>obust.</p>
+</blockquote>
+<p><a href="https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl">De European Accessibility Act</a> refereert specifiek naar <a href="">WCAG versie 2.1 niveau AA</a>, alhoewel versie 2.2 momenteel (ook) nog in <em>Recommendation</em> fase is, is het verstandig om te zorgen ook aan <a href="https://www.w3.org/Translations/WCAG22-nl/">versie 2.2 niveau AA</a> te voldoen.</p>
+<p><a href="(https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl)">De European Accessibility Act</a> verwijst specifiek naar WCAG 2.1, niveau AA. Hoewel versie 2.2 op dit moment nog in de aanbevelingsfase zit, is het verstandig om aan <a href="https://www.w3.org/Translations/WCAG22-nl/">WCAG 2.2 niveau AA</a> te voldoen.</p>
+<h3 id="aria">ARIA </h3>
+<p><a href="https://www.w3.org/WAI/standards-guidelines/aria/">Accessible Rich Internet Applications (ARIA)</a> is een specificatie van het W3C die helpt om interactieve webinhoud toegankelijk te maken voor mensen met een beperking. Met ARIA-attributen kun je extra informatie en rolbeschrijvingen toevoegen aan HTML-elementen, zodat screenreaders complexe interfaces beter begrijpen.</p>
+<p>Let op: veel van deze toegankelijkheidsinformatie is al standaard aanwezig in correct toegepaste, semantische HTML-elementen. Verkeerd gebruik van ARIA kan juist voor méér problemen zorgen en de toegankelijkheid verslechteren.</p>
+<p>Daarom geldt vaak de ongeschreven regel: “<em>The first rule of ARIA is: Don’t use ARIA.</em>”, Of iets genuanceerder: <em><a href="https://www.w3.org/TR/using-aria/#rule1">If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, then do so.</a></em>”</p>
+<p><a name="wetgeving" href=""></a></p>
+<h3 id="wetgeving">Wetgeving </h3>
+<h4 id="implementatiewet-toegankelijkheidsvoorschriften-producten-en-diensten">Implementatiewet toegankelijkheidsvoorschriften producten en diensten </h4>
+<blockquote>
+<p>“<em>Met deze implementatiewet wordt de Europese Richtlijn met betrekking tot de toegankelijkheidsvoorschriften voor producten en diensten verankerd in de Nederlandse wetgeving.</em>”</p>
+</blockquote>
+<p><a href="https://www.eerstekamer.nl/wetsvoorstel/36380_implementatiewet">Implementatiewet toegankelijkheidsvoorschriften producten en diensten</a></p>
+<h4 id="european-accessibility-act">European Accessibility Act </h4>
+<p><a href="https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl">De European Accessibility Act</a>, goedgekeurd in 2019, is een EU-richtlijn die lidstaten verplicht om digitale en fysieke producten en diensten toegankelijk te maken voor mensen met een beperking. De wet stelt onder andere eisen aan de toegankelijkheid van websites en mobiele apps, en treedt op 28 juni 2025 in werking.</p>
+<h2 id="automatisch-testen-in-de-browser">(Automatisch) testen in de browser </h2>
+<p>Er zijn verschillende extensies beschikbaar om direct in de browser te testen. De onderstaande extensies zijn geschikt voor Chromium-gebaseerde browsers, zoals:</p>
+<ul>
+<li>Google Chrome</li>
+<li>Microsoft Edge</li>
+<li>Brave</li>
+<li>Chromium</li>
+<li>Opera</li>
+</ul>
+<p>Er zijn verschillende browserextensies beschikbaar die (gedeeltelijk automatisch) toegankelijkheidsaspecten testen. Omdat ze vaak verschillende resultaten geven, is het verstandig om meerdere extensies te gebruiken en de uitkomsten kritisch te beoordelen.</p>
+<p>Sommige aspecten zijn goed automatisch te testen, zoals het ontbreken van alternatieve tekst bij afbeeldingen, kleurcontrast en een juiste documentstructuur. Andere onderdelen – zoals het correct gebruik van <a href="https://html.spec.whatwg.org/multipage/dom.html#semantics-2">HTML-semantiek</a> of begrijpelijk (B1) taalgebruik – zijn moeilijk automatisch te controleren en vragen om handmatige beoordeling.</p>
+<p>Test worden vrijwel altijd uitgevoerd op individuele pagina’s, niet een gehele site.</p>
+<h3 id="wave">WAVE </h3>
+<p><a href="https://wave.webaim.org/extension/">WAVE</a> van <a href="https://webaim.org/">WebAIM</a> geeft een overzicht van toegankelijkheid fouten en waarschuwingen op een pagina. Daarnaast geeft het ook correcte implementatie weer zoals de koptekst-structuur en de aanwezigheid van tekst-alternatieven voor afbeeldingen <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p><img src="images/wave-summary.png" alt="image"></p>
+<p><small>Bijschrift: <a href="https://kwiv.rijksapplicaties.nl/profielen/profiel-zoeken">Deze pagina</a> bevat 130 toegankelijkheidsfouten en 406 waarschuwingen.</small></p>
+<p>Door op <em>View details</em> te klikken krijg je een overzicht van de fouten en waarschuwingen met individuele links naar specifieke problemen (<em>Features</em> en <em>ARIA</em> kunnen in deze context genegeerd worden).</p>
+<p><img src="images/wave-error-details.png" alt="image"></p>
+<p><small>Bijschrift: Deze specifieke detailmelding geeft aan dat een koptekst (heading) geen tekst bevat…</small></p>
+<p>Deze extensie stuurt geen data naar derde partijen en kan hierdoor gebruikt worden voor projecten die nog niet opgeleverd zijn of alleen beschikbaar binnen het Rijksoverheid netwerk.</p>
+<blockquote>
+<p>Tip: Het uitzetten van de CSS stylesheet(s) d.m.v. de switch <em>Styles</em> op <em>Off</em> te zetten geeft de paginainhoud weer zoals bijvoorbeeld een screenreader of een zoekmachine deze interpreteert.<br>
+<img src="images/wave-switch-styles.png" alt="image"></p>
+</blockquote>
+<p><a href="https://wave.webaim.org/extension/">WAVE Browser Extensions</a></p>
+<h3 id="browserstack-accessibility-toolkit">BrowserStack Accessibility Toolkit </h3>
+<p>ℹ️ Om deze extensie te gebruiken is een account nodig. De gratis versie maakt het mogelijk vijf pagina’s per kalendermaand te scannen.</p>
+<p>Accessibility Toolkit voegt functionaliteit toe aan DevTools. Het is dus nodig om DevTools te openen om met deze extensie te werken.</p>
+<p>Deze extensie maakt het mogelijk om tevens op basis van pagina-interactie (door het navigeren op de pagina, acties activeren, etc.) een inventarisatie te maken.</p>
+<p><img src="images/browserstack-accessibility-toolkit.png" alt="image"></p>
+<p>Selecteer in DevTools het tabblad <em>Accessibility Toolkit</em> en klik op <em>Full page scan</em>.</p>
+<p>Door na de resultaten te ‘interacteren’ op de pagina kunnen ook dingen als menu’s, knoppen-staten, uitklapmechanismes, etc. gevalideerd worden.</p>
+<p><img src="images/browserstack-accessibility-toolkit-results.png" alt="image"></p>
+<p><a href="https://www.browserstack.com/docs/accessibility/overview/install-browser-extension">BrowserStack Accessibility Toolkit</a></p>
+<h3 id="accessible-web-helper">Accessible Web Helper </h3>
+<p><a href="https://accessibleweb.com/web-accessibility-checker-browser-extension/">Accessible Web Helper</a> is een andere extensie die een automatisch rapport genereert met een overzicht van toegankelijkheidsproblemen.</p>
+<p>Klik onder <em>Page Scanner</em> de optie <em>Scan Page</em> en zorg dat <em>Ruleset</em> WCAG 2.2 AA geselecteerd is. Klik vervolgens op <em>Scan Page</em> om een rapport te genereren.</p>
+<p><img src="images/accessible-web-helper-report.png" alt="image"></p>
+<p><small>Bijschrift: Accessible Web Helper resultaten <a href="https://kwiv.rijksapplicaties.nl/profielen/profiel-zoeken">van een specifieke pagina</a>.</small></p>
+<p><a href="https://chromewebstore.google.com/detail/accessible-web-helper/gdnpkbipbholkoaggmlblpbmgemddbgb">Accessible Web Helper in de Chrome Web Store</a></p>
+<h3 id="halfaccessible—accessibility-toolkit">HalfAccessible - Accessibility Toolkit </h3>
+<p>Deze extensie is voornamelijk handig om de <em>Target size</em> van interactieve elementen te controleren. Activeer onder <em>Tools</em> → <em>Target size</em>. Door met de muis over een interactief element te bewegen is het oppervlakte te zien.</p>
+<p><img src="images/accessibility-toolkit-targetsize.png" alt="image"></p>
+<p><img src="images/accessibility-toolkit-insufficient-targetsize.png" alt="image"></p>
+<p><small>Bijschrift: Een interactief element met onvoldoende klikoppervlak.</small></p>
+<p>Een interactief element (link of uitvoeren van een actie) dient <a href="#targetsize">minimaal 24 × 24 pixels te zijn</a>.</p>
+<p><em>Auto Scan</em> biedt ook de mogelijkheid om een automatische test uit te voeren via <em>Auto Scan</em> → <em>Automated Issues</em>. Deze functie laat goed zien dat geen enkele tool alle toegankelijkheidsproblemen automatisch kan opsporen. De resultaten kunnen sterk afwijken van die van andere testtools.</p>
+<p><a href="https://chromewebstore.google.com/detail/halfaccessible-accessibil/kofnlhenkilpdacklecdifdfigomanje">HalfAccessible - Accessibility Toolkit in de Chrome Web Store</a></p>
+<h3 id="digitala11y-tublets">DigitalA11Y Tublets </h3>
+<p>Met deze extensie kun je direct op een webpagina verschillende HTML-elementen en attributen bekijken, inclusief ARIA-gebruik en de tabvolgorde (de volgorde die een toetsenbordgebruiker ervaart).</p>
+<p><img src="images/digitala11y-tublets-headings.png" alt="image"></p>
+<p><small>Bijschrift: Tublets laat hier zien dat alleen koppen van niveau 6 worden gebruikt, <a href="https://www.a11yproject.com/posts/how-to-accessible-heading-structure/">zonder een correcte structuur of logische volgorde</a>.</small></p>
+<p><img src="images/digitala11y-tublets-taborder.png" alt="image"></p>
+<p><small>Bijschrift: Tabvolgorde: 1 geeft aan welk element als eerste focus krijgt met de <code>Tab</code>-toets, 2 het volgende, enzovoort.</small></p>
+<p><img src="images/digitala11y-tublets-overlapping-interactive-elements.png" alt="image"></p>
+<p><small>Bijschrift: Met de optie <em>Touch Target Size</em> laat Tublets zien of interactieve elementen elkaar overlappen.</small></p>
+<p><a href="https://chromewebstore.google.com/detail/digitala11y-tublets/ccjeccodophadokglbdcinabgkiiakjh">DigitalA11Y Tublets in de Chrome Web Store</a></p>
+<h3 id="barrierbreak-a11yinspect">BarrierBreak A11yInspect </h3>
+<p>A11yInspect bundelt meerdere hulpmiddelen (<em>bookmarklets</em>) om verschillende toegankelijkheidsaspecten te testen, zoals <em>landmarks</em> en <em>tabvolgorde</em>.</p>
+<p><img src="images/a11yinspect-landmarks.png" alt="image"></p>
+<p><small>Bijschrift: De optie <em>Landmarks</em> toont dat de volledige paginainhoud binnen een <code>&lt;form&gt;</code>-element staat. Omdat de pagina geen formulier is, kan dit tot verschillende toegankelijkheidsproblemen leiden.<br>
+</small></p>
+<p><img src="images/a11yinspect-taborder.png" alt="image"></p>
+<p><small>Bijschrift: <em>Tab Order</em> laat de volgorde zien waarin een toetsenbordgebruiker met de <code>Tab</code>-toets door de pagina navigeert.</small></p>
+<p><a href="https://chromewebstore.google.com/detail/barrierbreak-a11yinspect/giaolcgipopikbjonacmaokkeiaolmfp">BarrierBreak A11yInspect in de Chrome Web Store</a></p>
+<h3 id="devtools">DevTools </h3>
+<h3 id="lighthouse">Lighthouse </h3>
+<h2 id="handmatig-testen">Handmatig testen </h2>
+<h3 id="taalgebruik">Taalgebruik </h3>
+<p>Wordt er gecommuniceerd op een manier die voor iedereen, ongeacht opleidingsniveau, begrijpbaar is?</p>
+<h4 id="taalniveau-b1">Taalniveau B1 </h4>
+<blockquote>
+<p>“<a href="https://www.communicatierijk.nl/vakkennis/rijkswebsites/aanbevolen-richtlijnen/taalniveau-b1">Taalniveau B1</a> staat voor eenvoudig Nederlands. De overgrote meerderheid van de bevolking begrijpt teksten op taalniveau B1. Ook mensen die geen (hoge) opleiding hebben gehad. Een tekst op B1-niveau bestaat uit makkelijke woorden die bijna iedereen gebruikt. En uit korte, eenvoudige en actieve zinnen.” – <a href="https://www.communicatierijk.nl/vakkennis/rijkswebsites/aanbevolen-richtlijnen">Aanbevolen richtlijnen van CommunicatieRijk</a></p>
+</blockquote>
+<h3 id="landmarks">‘Landmarks’ </h3>
+<p>Landmarks, samen met correct gebruik van headings, geven de structuur weer van de pagina. Ze stellen o.a. in staat om snel naar diverse punten in de inhoud te navigeren. Sommige HTML elementen hebben een impliciete ‘landmark role’ en ‘accessible name’. Het is daarom aanbevolen om zo veel mogelijk gebruik te maken van de juiste HTML markup en het gebruik van ARIA te beperken.</p>
+<p>Enkele belangrijke HTML elementen met een geimpliceerde ‘role’:</p>
+<ul>
+<li><code>&lt;header&gt;</code> verwijst naar de paginakop, waarin veelal logo, sitenaam en hoofdnavigatie bevindt. <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
+<li><code>&lt;nav&gt;</code> verwijst naar een lijst met (sub)navigatie opties.</li>
+<li><code>&lt;main&gt;</code> verwijst naar de hoofdinhoud van een pagina. <sup class="footnote-ref"><a href="#fn2" id="fnref2:1">[2:1]</a></sup></li>
+<li><code>&lt;article&gt;</code></li>
+<li><code>&lt;section&gt;</code></li>
+<li><code>&lt;form&gt;</code> verwijst naar een formulier met invoermogelijkheden</li>
+<li><code>&lt;aside&gt;</code>, secundaire content</li>
+<li><code>&lt;footer&gt;</code>, de pagina footer met veelal links naar contactgegevens, disclaimers, copyright informatie etc. <sup class="footnote-ref"><a href="#fn2" id="fnref2:2">[2:2]</a></sup></li>
+</ul>
+<h3 id="skip-links">Skip-links </h3>
+<p><em>Skip links</em> zijn verborgen links bovenaan een pagina waarmee gebruikers direct naar de hoofdinhoud kunnen springen. Zo kunnen ze repeterende onderdelen, zoals de paginakop en navigatie, overslaan.</p>
+<p>De meeste screenreaders bieden standaard een manier om snel naar de hoofdinhoud te springen. Voor toetsenbordgebruikers zonder screenreader zijn skip links echter essentieel voor efficiënte navigatie. Deze link moet zichtbaar worden zodra hij focus krijgt, en als eerste in de tabvolgorde staan.</p>
+<h3 id="toetsenbordnavigatie-controleren">Toetsenbordnavigatie controleren </h3>
+<p>De extensie BarrierBreak A11yInspect kan de tab volgorde visualiseren.</p>
+<h3 id="gebruik-screenreader-software">Gebruik screenreader-software </h3>
+<p>Screenreading-software maakt het mogelijk om de inhoud van een webpagina voor te laten lezen. Daarnaast biedt het vaak functies om herhalende onderdelen, zoals de hoofdnavigatie, over te slaan.</p>
+<p>Gebruikers hebben meestal hun eigen voorkeuren, zoals de snelheid waarmee de tekst wordt voorgelezen.</p>
+<h3 id="in–en-uitzoomen">In- en uitzoomen </h3>
+<blockquote>
+<p>“Behalve voor ondertitels voor doven en slechthorenden en afbeeldingen van tekst, kan tekst zonder hulptechnologie tot 200% geschaald worden zonder verlies van content of functionaliteit.”</p>
+</blockquote>
+<p><a href="https://www.w3.org/Translations/WCAG22-nl/#resize-text">WCAG 2.2 AA Succescriterium 1.4.4 Herschalen van tekst</a></p>
+<h4 id="zoom-in-op-een-pagina">Zoom in op een pagina </h4>
+<p>Bij het inzoomen op een pagina wordt alles, inclusief tekst, afbeeldingen, knoppen en lay-out-elementen vergroot.</p>
+<p>Een pagina dient goed te werken wanneer deze tot 200% vergroot is zonder verlies van content of functionaliteit.</p>
+<ul>
+<li><code>Command</code> + <code>+</code>: Inzoomen</li>
+<li><code>Command</code> + <code>-</code>: Uitzoomen</li>
+<li><code>Command</code> + <code>0</code>: 100% zoomniveau</li>
+</ul>
+<p><small>Op Windows gebruik je in plaats van de <code>Command</code> toets <code>CTRL</code>.</small></p>
+<h4 id="tekst-vergroten">Tekst vergroten </h4>
+<p>Er is een belangrijk verschil tussen het vergroten van een pagina en van tekst. Bij het vergroten van tekst worden <strong>alleen</strong> tekstelementen op de pagina vergroot; andere elementen zoals knoppen, afbeeldingen en containers blijven ongewijzigd.</p>
+<p>Ook bij enkel het vergroten van tekst dient de pagina goed te werken wanneer deze tot 200% vergroot is zonder verlies van content of functionaliteit.</p>
+<p>In Chromium-browsers:</p>
+<ol>
+<li>Klik op het menu rechtboven op <em><a href="chrome://settings">Instellingen</a></em> (of <em><a href="chrome://settings">Settings</a></em>).</li>
+<li>Ga naar <em>Uiterlijk</em> (of <em>“Appearance”</em>).</li>
+<li>Zoek de optie <em>Lettergrootte</em> of <em>Font size</em>.</li>
+<li>Kies <em>Groot</em> (<em>Large</em>), <em>Zeer groot</em> (<em>Very large</em>), of een aangepaste waarde via <em>Aangepaste lettertypen</em>.</li>
+</ol>
+<p>Indien de tekst op de pagina niet groter wordt zijn er waarschijnlijk geen juiste eenheden voor de tekstgroottes gebruikt. De eenheden voor tekstgrootte zouden relatief mee moeten schalen.</p>
+<ul>
+<li>Pixels (<code>px</code>) zijn vaste eenheden, die zich niet (altijd) automatisch aanpassen aan de voorkeuren van de gebruiker en kunnen lay-out problemen veroorzaken bij tekstvergroting.</li>
+<li><code>em</code> en <code>rem</code> zijn relatieve eenheden, die zich aanpassen aan de ingestelde basislettergrootte van de browser of het besturingssysteem en schalen beter mee op verschillende schermformaten en resoluties (<em>Responsive design</em>).</li>
+</ul>
+<p><a href="targetsize"></a></p>
+<h3 id="minimale-grootte-van-interactieve-elementen">Minimale grootte van interactieve elementen </h3>
+<p>Voor iedereen is het fijn dat een klik- of tap-oppervlakte groot genoeg is om comfortabel met een pagina te interacteren.</p>
+<p>Voor mensen met bijvoorbeeld een motorische beperking, denk aan de Ziekte van Parkinson, is een minimum interactief oppervlakte een must.</p>
+<p>Volgens <a href="https://www.w3.org/Translations/WCAG22-nl/#target-size-minimum">het WCAG2.2 AA succescritrerium 2.5.8 Grootte van het aanwijsgebied (minimum)</a> dient dit oppervlak minimaal 24 × 24 pixels te zijn.</p>
+<h3 id="check-kleurcontrast">Check kleurcontrast </h3>
+<blockquote>
+<p>Tip: Een snelle manier om contrasten te testen is door de paginakleuren weer te geven in grijstinten.</p>
+</blockquote>
+<h2 id="aandachtspunten">Aandachtspunten </h2>
+<h3 id="koptekst-structuur">Koptekst-structuur </h3>
+<p>Kopteksten (headings) waarborgen de juiste informatiestructuur. Mensen die gebruik maken van screenreaders kunnen een overzicht voorgelezen krijgen van deze kopteksten om zo duidelijk de structuur van de pagina te begrijpen. Toetsenbordgebruikers (al dan niet in combinatie met screenreaders) kunnen makkelijk door de hoofdstuctuur van de pagina navigeren.</p>
+<p>op een pagina worden in HTML als <code>&lt;h1&gt;</code> t/m <code>&lt;h6&gt;</code> gedefineerd.</p>
+<p>Koppen op een pagina beginnen altijd op niveau 1. Dit is vaak een titel die de inhoud van betreffende pagina beschrijft. Op niveau 1 volgt 2, dan 3, dan 4, etc. Een niveau mag niet overgeslagen worden.</p>
+<pre class="language-text">&lt;h1&gt;Koptekst niveau 1&lt;/h1&gt;
+&lt;h2&gt;Koptekst niveau 2&lt;/h2&gt;
+&lt;p&gt;Paragraaftekst.&lt;/p&gt;
+&lt;h3&gt;Een niveau dieper&lt;/h3&gt;
+&lt;p&gt;Paragraaftekst die dieper ingaat op de inhoud van de tekst onder niveau 2.&lt;/p&gt;
+</pre>
+<p>of:</p>
+<pre class="language-text">&lt;h1&gt;Koptekst niveau 1&lt;/h1&gt;
+&lt;h2&gt;Koptekst niveau 2&lt;/h2&gt;
+&lt;p&gt;Paragraaftekst.&lt;/p&gt;
+&lt;h2&gt;Koptekst niveau 2&lt;/h2&gt;
+&lt;p&gt;Een volgende koptekst die op hetzelfde niveau als de eerdere staat.&lt;/p&gt;
+</pre>
+<p>wat niet mag:</p>
+<pre class="language-text">&lt;h1&gt;Koptekst niveau 1&lt;/h1&gt;
+&lt;h3&gt;Koptekst niveau 3&lt;/h3&gt;
+</pre>
+<p>In het laatste voorbeeld wordt een niveau overgeslagen.</p>
+<h2 id="gebruikerstesten">Gebruikerstesten </h2>
+<p>Het testen met ‘echte’ gebruikers heeft uiteraard de voorkeur. Aangezien er met meerdere, en combinaties van beperkingen rekening gehouden dient te worden is dit echter moeilijk.</p>
+<h2 id="accessibility-audit">Accessibility audit </h2>
+<p>Een officiële accessibility audit neemt steekproeven van pagina’s en resulteerd in een uitgebreid rapport van bevindingen en aanbevelingen.</p>
+<p><a href="https://leveranciersportaal.rijksinkopen.nl/static/files/193739/inspectie-leveranciersportaalrijksinkopennl-11-2024.pdf">Onderzoeksrapport leveranciersportaal.rijksinkopen.nl door Cardan</a></p>
+<h2 id="bronnen">Bronnen </h2>
+<h3 id="european-accessibility-act-1">European Accessibility Act </h3>
+<ul>
+<li><a href="https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en?prefLang=nl">European accessibility act</a></li>
+<li><a href="https://eur-lex.europa.eu/eli/dir/2019/882">Richtlijn (EU) 2019/882 van het Europees Parlement en de Raad van 17 april 2019 betreffende de toegankelijkheidsvoorschriften voor producten en diensten</a></li>
+<li><a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf">Harmonised European Standard Accessibility requirements for ICT products and services</a> (PDF)</li>
+<li><a href="https://www.rijksoverheid.nl/onderwerpen/leven-met-een-beperking/producten-en-diensten-toegankelijker-voor-mensen-met-beperking">Producten en diensten toegankelijker voor mensen met beperking</a></li>
+<li><a href="https://www.eerstekamer.nl/wetsvoorstel/36380_implementatiewet">Implementatiewet toegankelijkheidsvoorschriften producten en diensten</a></li>
+<li><a href="https://www.accessibility.nl/EAA">European Accessibility Act themasite van Stichting Accessibility</a></li>
+</ul>
+<h3 id="web-content-accessibility-guidelines-wcag">Web Content Accessibility Guidelines (WCAG) </h3>
+<ul>
+<li><a href="https://www.w3.org/Translations/WCAG22-nl/">Web Content Accessibility Guidelines (WCAG) 2.2<br>
+</a>, geautoriseerde Nederlandse vertaling van de WCAG 2.2 richtlijnen</li>
+<li><a href="https://wcag.nl/kennis/richtlijnen/wcag-2-2-richtlijnen/">Richtlijnen voor Toegankelijkheid van Webcontent (WCAG) 2.2</a>, een andere bron voor een Nederlandse versie van WCAG 2.2</li>
+<li><a href="https://www.a11yproject.com/checklist/">WCAG compliance checklist (The Accessibility Project)</a></li>
+</ul>
+<h3 id="html-semantiek">HTML-semantiek </h3>
+<ul>
+<li><a href="https://webaim.org/techniques/semanticstructure/">Semantic Structure: Regions, Headings, and Lists</a></li>
+<li><a href="https://html.spec.whatwg.org/multipage/dom.html#semantics-2">HTML Living Standard 3.2.1 Semantics</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements">HTML elements reference (MDN web docs)</a></li>
+</ul>
+<h3 id="overheid-en-toegankelijkheid">Overheid en toegankelijkheid </h3>
+<ul>
+<li><a href="https://dashboard.digitoegankelijk.nl/">Dashboard DigiToegankelijk</a>, een overzicht van de toegankelijkheid van websites en apps van de Nederlandse overheid.</li>
+<li><a href="https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/digitale-inclusie/">Digitale Overheid: Digitale inclusie</a></li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>De juiste beschrijving van afbeeldingen wordt uiteraard niet getest. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Mag slechts eenmaal op een pagina gebruikt worden. <a href="#fnref2" class="footnote-backref">↩︎</a> <a href="#fnref2:1" class="footnote-backref">↩︎</a> <a href="#fnref2:2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
